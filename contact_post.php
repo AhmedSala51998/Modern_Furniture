@@ -14,6 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail = new PHPMailer(true);
 
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
+
     $lang = $_POST['lang'] ?? 'en';
 
     try {
