@@ -1538,7 +1538,8 @@
             success_title: "Success",
             error_title: "Error",
             oops_title: "Oops...",
-            general_error: "Something went wrong. Please try again."
+            general_error: "Something went wrong. Please try again.",
+            ok_btn: "OK"
         },
 
         ar: {
@@ -1555,7 +1556,8 @@
             success_title: "تم بنجاح",
             error_title: "خطأ",
             oops_title: "عذراً",
-            general_error: "حدث خطأ ما، حاول مرة أخرى."
+            general_error: "حدث خطأ ما، حاول مرة أخرى.",
+            ok_btn: "حسناً"
         }
 
     };
@@ -1654,7 +1656,8 @@
                                     icon: 'success',
                                     title: t.success_title,
                                     text: response.message,
-                                    confirmButtonColor: '#0d6efd'
+                                    confirmButtonText: t.ok_btn,
+                                    confirmButtonColor: 'green'
                                 });
 
                                 $("#contactForm")[0].reset();
@@ -1665,7 +1668,8 @@
                                     icon: 'error',
                                     title: t.error_title,
                                     text: response.message,
-                                    confirmButtonColor: '#dc3545'
+                                    confirmButtonText: t.ok_btn,
+                                    confirmButtonColor: '#e4332d'
                                 });
 
                             }
