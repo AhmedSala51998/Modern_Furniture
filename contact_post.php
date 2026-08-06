@@ -86,83 +86,121 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ============================== */
 
         $body = '
-        <div dir="'.$dir.'" style="background:#f4f4f7;padding:40px 0;font-family:Arial,sans-serif;text-align:'.$align.';">
-          <table align="center" width="100%" cellpadding="0" cellspacing="0"
-                 style="max-width:600px;background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.07);">
+        <div style="background:#f5f7fb;padding:40px 20px;font-family:Arial,sans-serif">
 
-            <tr>
-              <td style="padding:30px;text-align:center;">
-                <img src="'.$logoUrl.'" style="width:180px;margin-bottom:20px;">
-                <h2 style="margin:0;color:#333;">'.$title.'</h2>
-              </td>
-            </tr>
+            <table width="650" align="center" cellpadding="0" cellspacing="0"
+                  style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 15px rgba(0,0,0,.08);">
 
-            <tr>
-              <td style="padding:20px 40px;">
+                <tr>
+                    <td style="background:#e4332d;padding:35px;text-align:center">
 
-                <p style="font-size:16px;color:#444;">
-                  '.$receivedText.'
-                </p>
+                        <img src="'.$logoUrl.'" style="max-width:180px;margin-bottom:15px">
 
-                <hr>
+                        <h1 style="margin:0;color:#fff;font-size:28px">
+                            Modern Furniture
+                        </h1>
 
-                <p><strong>'.$clientName.':</strong> '.htmlspecialchars($_POST['name']).'</p>
+                        <p style="margin-top:10px;color:#fff;font-size:15px">
+                            New Contact Form Submission
+                        </p>
 
-                <p><strong>'.$emailText.':</strong> 
-                   <a href="mailto:'.htmlspecialchars($_POST['email']).'">
-                   '.htmlspecialchars($_POST['email']).'
-                   </a>
-                </p>
+                    </td>
+                </tr>
 
-                <p><strong>'.$phoneText.':</strong>
-                '.htmlspecialchars($_POST['phone']).'
-                </p>
+                <tr>
+                    <td style="padding:35px">
 
-                <p><strong>'.$projectText.':</strong>
-                '.htmlspecialchars($_POST['project']).'
-                </p>
+                        <h2 style="margin-top:0;color:#222">
+                            Contact Details
+                        </h2>
 
-                <p><strong>'.$projectType.':</strong> '.htmlspecialchars($_POST['subject']).'</p>
+                        <table width="100%" cellpadding="12" cellspacing="0"
+                              style="border-collapse:collapse">
 
-                <p><strong>'.$projectDetails.':</strong><br>
-                '.nl2br(htmlspecialchars($_POST['message'])).'
-                </p>
+                            <tr style="background:#f8f9fc">
+                                <td width="180"><strong>Client Name</strong></td>
+                                <td>'.htmlspecialchars($_POST['name']).'</td>
+                            </tr>
 
-                <hr>
+                            <tr>
+                                <td><strong>Email Address</strong></td>
+                                <td>
+                                    <a href="mailto:'.htmlspecialchars($_POST['email']).'">
+                                        '.htmlspecialchars($_POST['email']).'
+                                    </a>
+                                </td>
+                            </tr>
 
-              <!-- Footer -->
-              <p style="color:#777;font-size:14px;line-height:1.7;margin-top:20px;">
-                '.$sentOn.' '.date("Y-m-d H:i").'<br>
-                '.$companyText.'
-              </p>
+                            <tr style="background:#f8f9fc">
+                                <td><strong>Phone Number</strong></td>
+                                <td>'.htmlspecialchars($_POST['phone']).'</td>
+                            </tr>
 
-              <p style="font-size:14px;color:#999;line-height:1.6;margin-top:25px;">
-                '.($lang === 'ar'
-                  ? 'تم إرسال هذه الرسالة عبر نموذج "تواصل معنا" على موقع مودرن فيرنتشر. يرجى مراجعة البيانات والتواصل مع العميل في أقرب وقت.'
-                  : 'This message was sent via the "Contact Us" form on Modern Furniture website. Please review the details and respond to the client accordingly.'
-                ).'
-              </p>
+                            <tr>
+                                <td><strong>Project Type</strong></td>
+                                <td>'.htmlspecialchars($_POST['project']).'</td>
+                            </tr>
 
-              <p style="font-size:13px;color:#aaa;margin-top:10px;">
-                <a href="https://modernfurnitureco.net" target="_blank" style="color:#aaa;text-decoration:underline;">
-                  '.($lang === 'ar' ? 'زيارة الموقع' : 'Visit Website').'
-                </a>
-                |
-                <a href="https://modernfurnitureco.net/privacy" target="_blank" style="color:#aaa;text-decoration:underline;">
-                  '.($lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy').'
-                </a>
-              </p>
+                            <tr style="background:#f8f9fc">
+                                <td><strong>Subject</strong></td>
+                                <td>'.htmlspecialchars($_POST['subject']).'</td>
+                            </tr>
 
-              <p style="font-size:13px;color:#aaa;margin-top:15px;">
-                © '.date('Y').' Modern Furniture. '.($lang === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.').'
-              </p>
+                        </table>
 
-              </td>
-            </tr>
+                        <h3 style="margin-top:35px;color:#222">
+                            Client Message
+                        </h3>
 
-          </table>
-        </div>
-        ';
+                        <div style="
+                            background:#f8f9fc;
+                            border-left:4px solid #e4332d;
+                            padding:20px;
+                            line-height:1.8;
+                            color:#444;
+                            border-radius:6px;
+                        ">
+                            '.nl2br(htmlspecialchars($_POST['message'])).'
+                        </div>
+
+                        <hr style="margin:35px 0;border:none;border-top:1px solid #eee">
+
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <strong>Submission Date</strong><br>
+                                    '.date('Y-m-d h:i A').'
+                                </td>
+
+                                <td align="right">
+                                    <strong>Website</strong><br>
+                                    modernfurnitureco.net
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="
+                        background:#222;
+                        color:#fff;
+                        text-align:center;
+                        padding:25px;
+                        font-size:13px;
+                    ">
+
+                        © '.date('Y').' Modern Furniture<br>
+
+                        Home Finishing & Interior Decoration Works
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>';
 
         $mail->isHTML(true);
         $mail->Body = $body;
