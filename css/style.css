@@ -1088,105 +1088,99 @@ html[dir="rtl"] .service-content-inner p{
 }
 
 
-/* Navbar */
-.navbar {
-    min-height: 85px;
-    border-radius: 0 0 18px 18px;
-}
+@media (max-width: 991.98px) {
 
-/* Logo */
-.navbar-brand h1 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-}
-
-.navbar-brand img {
-    width: 55px !important;
-    height: 55px !important;
-}
-
-/* Mobile */
-@media (max-width: 667px) {
-
-    .navbar {
-        padding: 12px 18px !important;
+    /* النافبار */
+    .navbar{
+        padding: 10px 15px !important;
+        min-height: 75px;
+        display: flex;
+        align-items: center;
     }
 
-    .navbar-toggler {
-        border: none;
-        box-shadow: none !important;
+    /* إخفاء اسم الموقع */
+    .navbar-brand span{
+        display: none !important;
+    }
+
+    /* اللوجو */
+    .navbar-brand{
+        margin: 0;
         padding: 0;
-        margin-left: 10px;
     }
 
-    html[dir="rtl"] .navbar-toggler {
-        margin-left: 0;
+    .navbar-brand img{
+        width: 55px !important;
+        height: 55px !important;
+        object-fit: contain;
+    }
+
+    /* ترتيب العناصر */
+    .mobile-lang{
+        margin-left: auto;
         margin-right: 10px;
     }
 
-    .navbar-collapse {
-        margin-top: 15px;
-        background: #fff;
-        border-radius: 16px;
-        padding: 15px;
-        box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    html[dir="rtl"] .mobile-lang{
+        margin-right: auto;
+        margin-left: 10px;
     }
 
-    .navbar-nav .nav-link {
-        padding: 14px 15px;
+    /* زر اللغة */
+    .mobile-lang .btn{
+        height: 42px;
+        padding: 0 14px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    /* التوجل */
+    .navbar-toggler{
+        width: 42px;
+        height: 42px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler span{
+        font-size: 22px;
+    }
+
+    /* القائمة */
+    .navbar-collapse{
+        margin-top: 15px;
+        background: #fff;
+        border-radius: 18px;
+        padding: 15px;
+        box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
+
+    .navbar-nav .nav-link{
+        padding: 14px 18px !important;
         border-radius: 12px;
-        margin-bottom: 6px;
         font-size: 16px;
         font-weight: 600;
     }
 
     .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
+    .navbar-nav .nav-link.active{
         background: rgba(228,51,45,.08);
-        color: #e4332d !important;
     }
 
-    .mobile-lang {
-        margin-inline-start: auto;
-    }
-
-    .language-btn {
-        border-radius: 12px;
-        padding: 8px 14px;
-        color: #fff;
-        font-weight: 600;
-    }
-
-    .dropdown-menu {
-        border-radius: 14px;
-        min-width: 170px;
-    }
-
-    .dropdown-item {
-        padding: 10px 15px;
-    }
-
-    /* WhatsApp Button */
-    .navbar-collapse .btn-primary {
+    /* زر الواتساب */
+    .navbar-collapse .btn-primary{
         width: 100%;
-        margin-top: 12px;
-        margin-left: 0 !important;
+        margin: 15px 0 0 0 !important;
+        padding: 14px;
+        border-radius: 12px;
         justify-content: center;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    /* RTL Arabic */
-    html[dir="rtl"] .navbar-nav {
-        text-align: right;
-    }
-
-    html[dir="ltr"] .navbar-nav {
-        text-align: left;
     }
 }
