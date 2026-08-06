@@ -43,7 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if($lang === 'ar'){
 
-            $mail->Subject = 'استفسار مشروع جديد - مودرن فيرنتشر';
+            //$mail->Subject = 'استفسار مشروع جديد - مودرن فيرنتشر';
+            $mail->Subject = ' مودرن فيرنتشر - ' . $_POST['subject'];
 
             $dir = 'rtl';
             $align = 'right';
@@ -64,7 +65,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         } else {
 
-            $mail->Subject = 'New Project Inquiry - Modern Furniture';
+            //$mail->Subject = 'New Project Inquiry - Modern Furniture';
+            $mail->Subject = 'Modern Furniture - ' . $_POST['subject'];
 
             $dir = 'ltr';
             $align = 'left';
