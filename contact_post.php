@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </p>
 
               <p style="font-size:13px;color:#aaa;margin-top:15px;">
-                © '.date('Y').' Modern Business. '.($lang === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.').'
+                © '.date('Y').' Modern Furniture. '.($lang === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.').'
               </p>
 
               </td>
