@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 15px rgba(0,0,0,.08);">
 
                 <tr>
-                    <td style="background:#e4332d;padding:35px;text-align:center">
+                    <td style="background:rgba(228,51,45,0.03);padding:35px;text-align:center">
 
                         <img src="'.$logoUrl.'" style="max-width:180px;margin-bottom:15px">
 
