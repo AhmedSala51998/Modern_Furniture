@@ -1108,7 +1108,7 @@ html[dir="rtl"] .service-content-inner p{
 }
 
 /* Mobile */
-@media (max-width: 991.98px) {
+@media (max-width: 667px) {
 
     .navbar {
         padding: 12px 18px !important;
