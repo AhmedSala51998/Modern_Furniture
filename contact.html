@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Modern Furniture | Contact Us</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicon -->
+        <link href="img/logo.png" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" style="color: #e4332d;" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 d-none d-lg-block">
+            <div class="container px-0">
+                <div class="row gx-0 align-items-center" style="height: 45px;">
+
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <a data-key="find_location" href="https://maps.app.goo.gl/kAcYMRAu4va74jGX8" class="text-muted me-4">
+                                <i class="fas fa-map-marker-alt me-2"></i>Find A Location
+                            </a>
+
+                            <a href="https://api.whatsapp.com/send?phone=966555366665" class="text-muted me-4">
+                                <i class="fas fa-phone-alt me-2"></i>+966555366665
+                            </a>
+
+                            <a href="mailto:info@modernfurnitureco.net" class="text-muted me-4">
+                                <i class="fas fa-envelope me-2"></i>info@modernfurnitureco.net
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex align-items-center justify-content-end">
+
+                            <!-- Language Switcher -->
+                            <div class="dropdown me-3">
+                                <button class="btn btn-sm language-btn dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown">
+                                    <i class="fas fa-globe-americas me-2"></i>
+                                    <span id="currentLang">EN</span>
+                                </button>
+
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                                    <li>
+                                        <a class="dropdown-item lang-option" href="#" data-lang="en">
+                                            🇺🇸 English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item lang-option" href="#" data-lang="ar">
+                                            🇸🇦 العربية
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Social -->
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-2">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-2">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill me-2">
+                                <i class="fab fa-snapchat-ghost text-white"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-primary btn-square rounded-circle nav-fill">
+                                <i class="fab fa-tiktok text-white"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="position-absolute bg-dark" style="left: 0; top: 0; width: 100%; height: 100%;"></div>
+
+            <div class="container px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
+
+                    <a href="index" class="navbar-brand p-0">
+                        <h1 class="m-0">
+                            <img style="width:60px;height:60px" src="img/logo.png" alt="Logo">
+                            <span data-key="site_name">Modern Furniture</span>
+                        </h1>
+                    </a>
+
+                    <!-- Mobile Language Switcher -->
+                    <div class="mobile-lang dropdown d-lg-none me-2">
+                        <button style="background-color: #e4332d;"
+                            class="btn btn-sm language-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown">
+
+                            <i class="fas fa-globe-americas"></i>
+                            <span id="currentLangMobile">EN</span>
+
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                            <li>
+                                <a class="dropdown-item lang-option" onclick="setLang('en')" data-lang="en">
+                                    🇺🇸 English
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item lang-option" onclick="setLang('ar')" data-lang="ar">
+                                    🇸🇦 العربية
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse">
+
+                        <span class="fa fa-bars" style="color: #FFF;"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                        <div class="navbar-nav ms-auto py-0">
+
+                            <a href="index"
+                                class="nav-item nav-link"
+                                data-key="home">
+                                Home
+                            </a>
+
+                            <a href="about"
+                                class="nav-item nav-link"
+                                data-key="about">
+                                About
+                            </a>
+
+                            <a href="service"
+                                class="nav-item nav-link"
+                                data-key="services">
+                                Services
+                            </a>
+
+                            <a href="product"
+                                class="nav-item nav-link"
+                                data-key="products">
+                                Products
+                            </a>
+
+                            <a href="contact"
+                                class="nav-item nav-link active"
+                                data-key="contact">
+                                Contact
+                            </a>
+
+                        </div>
+
+                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+
+                            <a href="https://api.whatsapp.com/send?phone=966555366665"
+                                class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">
+
+                                <i class="fab fa-whatsapp text-white"></i>
+
+                                <span data-key="whatsapp_btn">
+                                    Contact WhatsApp
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="bg-breadcrumb-single"></div>
+
+            <div class="container text-center py-5" style="max-width: 900px;">
+
+                <h4 class="text-white display-4 mb-4 wow fadeInDown"
+                    data-wow-delay="0.1s"
+                    data-key="contact_page_title">
+                    Contact Us
+                </h4>
+
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown"
+                    data-wow-delay="0.3s">
+
+                    <li class="breadcrumb-item">
+                        <a href="index" data-key="home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#" data-key="pages">
+                            Pages
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item active text-primary"
+                        style="color: #e4332d !important;"
+                        data-key="contact_page_title">
+                        Contact Us
+                    </li>
+
+                </ol>
+
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="contact-item">
+
+                            <div class="pb-5">
+                                <h4 style="color: #e4332d;" data-key="contact_title">Contact Us</h4>
+
+                                <h1 class="display-4 mb-4"
+                                    data-key="contact_subtitle">
+                                    Get In Touch With Us
+                                </h1>
+
+                                <h4 class="lh-base mb-0"
+                                    data-key="contact_desc">
+                                    Contact us today and bring your ideas to life with quality craftsmanship.
+                                </h4>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div style="background-color: #e4332d;color:#FFF;"
+                                    class="btn-lg-square rounded-circle p-4">
+                                    <i class="fa fa-home text-white"></i>
+                                </div>
+
+                                <div class="ms-4">
+                                    <h4 data-key="contact_address_title">
+                                        Addresses
+                                    </h4>
+
+                                    <p class="mb-0"
+                                    data-key="contact_address_text">
+                                    3024 Abu Bakr Al Razi, 8161, Industrial Area, Dammam 32442, Saudi Arabia
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div style="background-color: #e4332d;color:#FFF;"
+                                    class="btn-lg-square rounded-circle p-2">
+                                    <i class="fa fa-phone-alt text-white"></i>
+                                </div>
+
+                                <div class="ms-4">
+                                    <h4 data-key="contact_mobile_title">
+                                        Mobile
+                                    </h4>
+
+                                    <p class="mb-0">
+                                        +966555366665
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-0">
+                                <div style="background-color: #e4332d;color:#FFF;"
+                                    class="btn-lg-square rounded-circle p-2">
+                                    <i class="fa fa-envelope-open text-white"></i>
+                                </div>
+
+                                <div class="ms-4">
+                                    <h4 data-key="contact_email_title">
+                                        Email
+                                    </h4>
+
+                                    <p class="mb-0">
+                                        info@modernfurnitureco.net
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <form method="post" action="contact_post.php">
+
+                            <div class="row g-3">
+
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text"
+                                            class="form-control"
+                                            id="name"
+                                            name="name"
+                                            required
+                                            data-key-placeholder="contact_name"
+                                            placeholder="Your Name">
+
+                                        <label for="name"
+                                            data-key="contact_name">
+                                            Your Name
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email"
+                                            class="form-control"
+                                            id="email"
+                                            name="email"
+                                            required
+                                            data-key-placeholder="contact_email"
+                                            placeholder="Your Email">
+
+                                        <label for="email"
+                                            data-key="contact_email">
+                                            Your Email
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="phone"
+                                            class="form-control"
+                                            id="phone"
+                                            name="phone"
+                                            required
+                                            pattern="^(05\d{8}|9665\d{8}|\+9665\d{8})$"
+                                            data-key-placeholder="contact_phone"
+                                            placeholder="Your Phone">
+
+                                        <label for="phone"
+                                            data-key="contact_phone">
+                                            Your Phone
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text"
+                                            class="form-control"
+                                            id="project"
+                                            name="project"
+                                            required
+                                            data-key-placeholder="contact_project"
+                                            placeholder="Your Project">
+
+                                        <label for="project"
+                                            data-key="contact_project">
+                                            Your Project
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text"
+                                            class="form-control"
+                                            id="subject"
+                                            name="subject"
+                                            required
+                                            data-key-placeholder="contact_subject"
+                                            placeholder="Subject">
+
+                                        <label for="subject"
+                                            data-key="contact_subject">
+                                            Subject
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+
+                                        <textarea class="form-control"
+                                                id="message"
+                                                name="message"
+                                                required
+                                                style="height:160px"
+                                                data-key-placeholder="contact_message"
+                                                placeholder="Message"></textarea>
+
+                                        <label for="message"
+                                            data-key="contact_message">
+                                            Message
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit"
+                                            class="btn btn-primary w-100 py-3"
+                                            data-key="contact_btn">
+                                        Send Message
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+
+                    <!-- About Company -->
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4" data-key="footer_about_title">About Us</h4>
+
+                            <p class="mb-4" data-key="footer_about_desc">
+                                We specialize in premium interior finishing, custom furniture,
+                                CNC wall panels, decorative wall cladding, modern kitchens,
+                                bedrooms, living rooms, wardrobes, and home landscaping solutions.
+                            </p>
+
+                            <div class="d-flex align-items-center">
+                                <a class="btn btn-light btn-md-square me-2" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-light btn-md-square me-2" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-light btn-md-square me-2" href="#">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a class="btn btn-light btn-md-square" href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-6 col-lg-6 col-xl-2">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4" data-key="footer_links_title">Quick Links</h4>
+
+                            <a href="index">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="home">Home</span>
+                            </a>
+
+                            <a href="about">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="about">About Us</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="services">Services</span>
+                            </a>
+
+                            <a href="product">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="products">Products</span>
+                            </a>
+
+                            <a href="contact">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="contact">Contact Us</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4" data-key="footer_services_title">Our Services</h4>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_1">CNC Wall Panels</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_2">Wall Cladding</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_3">Modern Kitchens</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_4">Bedrooms</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_5">Living Rooms</span>
+                            </a>
+
+                            <a href="service">
+                                <i class="fas fa-angle-right me-2"></i>
+                                <span data-key="footer_service_6">Home Gardens</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4" data-key="footer_contact_title">Contact Information</h4>
+
+                            <a href="https://maps.app.goo.gl/kAcYMRAu4va74jGX8">
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                <span data-key="footer_address">
+                                    3024 Abu Bakr Al Razi, 8161, Industrial Area, Dammam 32442, Saudi Arabia
+                                </span>
+                            </a>
+
+                            <a href="mailto:info@modernfurnitureco.net">
+                                <i class="fas fa-envelope me-2"></i>
+                                info@modernfurnitureco.net
+                            </a>
+
+                            <a href="tel:+966555366665">
+                                <i class="fas fa-phone me-2"></i>
+                                +966 55 536 6665
+                            </a>
+
+                            <a href="tel:+966580999954">
+                                <i class="fas fa-phone me-2"></i>
+                                +966 58 099 9954
+                            </a>
+
+                            <a href="https://wa.me/966555366665">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                <span data-key="footer_whatsapp">WhatsApp Support</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body">
+                            <a href="https://modernfurnitureco.net/" style="color: #e4332d;" class="border-bottom">
+                                <i class="fas fa-copyright text-light me-2"></i>
+                                Modern Furniture
+                            </a>,
+                            <span data-key="copyright_text">All right reserved.</span>
+                        </span>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        <span data-key="copyright_designed">Designed By</span>
+                        <a style="color: #e4332d;" class="border-bottom" href="https://sweepicode.com/">
+                            Sweepicode Company
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
