@@ -340,7 +340,7 @@
                     </div>
 
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <form method="post" action="contact_post.php">
+                        <form id="contactForm" method="post" action="contact_post.php">
 
                             <div class="row g-3">
 
@@ -350,7 +350,6 @@
                                             class="form-control"
                                             id="name"
                                             name="name"
-                                            required
                                             data-key-placeholder="contact_name"
                                             placeholder="Your Name">
 
@@ -358,16 +357,16 @@
                                             data-key="contact_name">
                                             Your Name
                                         </label>
+                                        <small class="text-danger error-name"></small>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email"
+                                        <input type="text"
                                             class="form-control"
                                             id="email"
                                             name="email"
-                                            required
                                             data-key-placeholder="contact_email"
                                             placeholder="Your Email">
 
@@ -375,6 +374,7 @@
                                             data-key="contact_email">
                                             Your Email
                                         </label>
+                                        <small class="text-danger error-email"></small>
                                     </div>
                                 </div>
 
@@ -384,8 +384,7 @@
                                             class="form-control"
                                             id="phone"
                                             name="phone"
-                                            required
-                                            pattern="^(05\d{8}|9665\d{8}|\+9665\d{8})$"
+                                            
                                             data-key-placeholder="contact_phone"
                                             placeholder="Your Phone">
 
@@ -393,6 +392,7 @@
                                             data-key="contact_phone">
                                             Your Phone
                                         </label>
+                                        <small class="text-danger error-phone"></small>
                                     </div>
                                 </div>
 
@@ -402,7 +402,7 @@
                                             class="form-control"
                                             id="project"
                                             name="project"
-                                            required
+                                            
                                             data-key-placeholder="contact_project"
                                             placeholder="Your Project">
 
@@ -410,6 +410,7 @@
                                             data-key="contact_project">
                                             Your Project
                                         </label>
+                                        <small class="text-danger error-project"></small>
                                     </div>
                                 </div>
 
@@ -419,7 +420,7 @@
                                             class="form-control"
                                             id="subject"
                                             name="subject"
-                                            required
+                                            
                                             data-key-placeholder="contact_subject"
                                             placeholder="Subject">
 
@@ -427,6 +428,7 @@
                                             data-key="contact_subject">
                                             Subject
                                         </label>
+                                        <small class="text-danger error-subject"></small>
                                     </div>
                                 </div>
 
@@ -436,7 +438,7 @@
                                         <textarea class="form-control"
                                                 id="message"
                                                 name="message"
-                                                required
+                                                
                                                 style="height:160px"
                                                 data-key-placeholder="contact_message"
                                                 placeholder="Message"></textarea>
@@ -445,15 +447,20 @@
                                             data-key="contact_message">
                                             Message
                                         </label>
+                                        <small class="text-danger error-message"></small>
 
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit"
-                                            class="btn btn-primary w-100 py-3"
-                                            data-key="contact_btn">
-                                        Send Message
+
+                                    <button
+                                        id="submitBtn"
+                                        type="submit"
+                                        class="btn btn-primary w-100 py-3">
+
+                                        <span data-key="contact_btn" id="btnText">Send Message</span>
+
                                     </button>
                                 </div>
 
@@ -643,6 +650,7 @@
 
         
     <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -650,10 +658,182 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+        <script>
+    const messages = {
+
+        en: {
+            enter_name: "Please enter your name",
+            enter_email: "Please enter your email",
+            invalid_email: "Invalid email format",
+            enter_subject: "Please enter subject title",
+            enter_phone: "Please enter your phone number",
+            enter_project: "Please enter project type",
+            enter_message: "Please enter project details",
+            invalid_phone: "Please enter a valid Saudi mobile number",
+
+            sending: "Sending...",
+            success_title: "Success",
+            error_title: "Error",
+            oops_title: "Oops...",
+            general_error: "Something went wrong. Please try again."
+        },
+
+        ar: {
+            enter_name: "يرجى إدخال الاسم",
+            enter_email: "يرجى إدخال البريد الإلكتروني",
+            invalid_email: "صيغة البريد الإلكتروني غير صحيحة",
+            enter_subject: "يرجى إدخال عنوان الموضوع",
+            enter_message: "يرجى إدخال تفاصيل المشروع",
+            enter_phone: "يرجى إدخال رقم الهاتف",
+            enter_project: "يرجى إدخال نوع المشروع",
+            invalid_phone: "يرجى إدخال رقم جوال سعودي صحيح",
+
+            sending: "جاري الإرسال...",
+            success_title: "تم بنجاح",
+            error_title: "خطأ",
+            oops_title: "عذراً",
+            general_error: "حدث خطأ ما، حاول مرة أخرى."
+        }
+
+    };
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            $("#contactForm").submit(function(e){
+                e.preventDefault();
+
+                let currentLang = localStorage.getItem("site_lang") || "en";
+                let t = messages[currentLang];
+
+                let isValid = true;
+
+                $(".text-danger").text("");
+
+                let name = $("#name").val().trim();
+                let email = $("#email").val().trim();
+                let subject = $("#subject").val().trim();
+                let message = $("#message").val().trim();
+                let phone = $("#phone").val().trim();
+                let project = $("#project").val().trim();
+                let saudiPhonePattern = /^(05\d{8}|9665\d{8}|\+9665\d{8})$/;
+
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if(name === ""){
+                    $(".error-name").text(t.enter_name);
+                    isValid = false;
+                }
+
+                if(email === ""){
+                    $(".error-email").text(t.enter_email);
+                    isValid = false;
+                } else if(!emailPattern.test(email)){
+                    $(".error-email").text(t.invalid_email);
+                    isValid = false;
+                }
+
+                if(subject === ""){
+                    $(".error-subject").text(t.enter_subject);
+                    isValid = false;
+                }
+
+                if(message === ""){
+                    $(".error-message").text(t.enter_message);
+                    isValid = false;
+                }
+
+                if(project === ""){
+                    $(".error-project").text(t.enter_project);
+                    isValid = false;
+                }
+
+                if(phone === ""){
+
+                    $(".error-phone").text(t.enter_phone);
+                    isValid = false;
+
+                } else if(!saudiPhonePattern.test(phone)){
+
+                    $(".error-phone").text(t.invalid_phone);
+                    isValid = false;
+
+                }
+
+                if(isValid){
+
+                    let originalText = $("#btnText").text();
+
+                    $("#submitBtn").prop("disabled", true);
+                    $("#btnText").text(t.sending);
+
+                    $.ajax({
+                        url: "contact_post.php",
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                            name: name,
+                            email: email,
+                            subject: subject,
+                            message: message,
+                            phone: phone,
+                            project: project,
+                            lang: currentLang
+                        },
+                        success: function(response){
+
+                            $("#submitBtn").prop("disabled", false);
+                            $("#btnText").text(originalText);
+
+                            if(response.status === "success"){
+
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: t.success_title,
+                                    text: response.message,
+                                    confirmButtonColor: '#0d6efd'
+                                });
+
+                                $("#contactForm")[0].reset();
+
+                            } else {
+
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: t.error_title,
+                                    text: response.message,
+                                    confirmButtonColor: '#dc3545'
+                                });
+
+                            }
+                        },
+                        error: function(){
+
+                            $("#submitBtn").prop("disabled", false);
+                            $("#btnText").text(originalText);
+
+                            Swal.fire({
+                                icon: 'error',
+                                title: t.oops_title,
+                                text: t.general_error,
+                                confirmButtonColor: '#dc3545'
+                            });
+
+                        }
+                    });
+
+                }
+
+            });
+
+        });
+    </script>
     </body>
 
 </html>
