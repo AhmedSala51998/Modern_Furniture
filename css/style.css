@@ -1121,10 +1121,6 @@ html[dir="rtl"] .service-content-inner p{
         margin-right: 10px;
     }
 
-    html[dir="rtl"] .mobile-lang{
-        margin-left: -40px;
-    }
-
     /* زر اللغة */
     .mobile-lang .btn{
         height: 42px;
