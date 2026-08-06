@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if($lang === 'ar'){
 
-            $mail->Subject = 'طلب استشارة جديد';
+            $mail->Subject = 'رسالة جديدة';
 
             $dir = 'rtl';
             $align = 'right';
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         } else {
 
-            $mail->Subject = 'New Construction Request';
+            $mail->Subject = 'New Message';
 
             $dir = 'ltr';
             $align = 'left';
