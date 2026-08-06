@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         } else {
 
-            $mail->Subject = 'New Construction Consultation Request';
+            $mail->Subject = 'New Construction Request';
 
             $dir = 'ltr';
             $align = 'left';
