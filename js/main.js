@@ -595,7 +595,38 @@
 
         setLang(savedLang);
 
+
+        // Disable right-click
+        $(document).on('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+
+        // Disable keyboard shortcuts
+        $(document).on('keydown', function(e) {
+
+            if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+                e.preventDefault();
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+                e.preventDefault();
+            }
+
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+
+        });
+
     });
+
+
+    
 
 
 })(jQuery);
