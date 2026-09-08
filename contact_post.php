@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress('info@modernfurnitureest.com', 'Modern Furniture');
 
         // Logo
-        $logoUrl = 'https://modernfurnitureco.net/img/logo.png';
+        $logoUrl = 'https://modernfurnitureest.com/img/logo.png';
 
         /* ==============================
            LANGUAGE SWITCH
@@ -279,7 +279,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                 <strong>'.$websiteTitle.'</strong><br>
 
-                                modernfurnitureco.net
+                                modernfurnitureest.com
 
                             </td>
 
