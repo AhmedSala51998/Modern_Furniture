@@ -25,14 +25,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.hostinger.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'info@modernfurnitureco.net';
+        $mail->Username   = 'info@modernfurnitureest.com';
         $mail->Password   = 'ModernFurniture2034@#';
         $mail->SMTPSecure = 'ssl';
         $mail->Port       = 465;
 
-        $mail->setFrom('info@modernfurnitureco.net', 'Modern Furniture');
+        $mail->setFrom('info@modernfurnitureest.com', 'Modern Furniture');
         $mail->addReplyTo($_POST['email'], htmlspecialchars($_POST['name']));
-        $mail->addAddress('info@modernfurnitureco.net', 'Modern Furniture');
+        $mail->addAddress('info@modernfurnitureest.com', 'Modern Furniture');
 
         // Logo
         $logoUrl = 'https://modernfurnitureco.net/img/logo.png';
